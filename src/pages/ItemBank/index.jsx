@@ -97,6 +97,8 @@ function Study() {
             passing_rate: 'down',
             difficulty: 'down',
         },
+        // 列表数据
+        dataSource: [],
     });
 
     const {
@@ -112,6 +114,7 @@ function Study() {
         sortBy,
         current_page,
         list_tatal,
+        dataSource,
     } = state;
 
     const handleSortChange = (title, value) => {
@@ -166,6 +169,7 @@ function Study() {
                 delete params[key];
             }
         });
+        getListData(params);
         console.log('params', params);
         // get("/v1/study_list", { params })
         //  .then((res) => {
@@ -362,6 +366,23 @@ function Study() {
             .catch((err) => {
                 console.log(err);
             });
+    };
+
+    // 获取列表数据
+    const getListData = (params) => {
+        // get('/v1/study_list', { params })
+        //     .then((res) => {
+        //         const { data } = res;
+        //         console.log('res', res);
+        //         dispatch({
+        //             dataSource: data?.content?.question ?? [],
+        //             list_tatal: data?.content?.totalPage ?? 0,
+        //         });
+        //         // dispatch({ labelList });
+        //     })
+        //     .catch((err) => {
+        //         console.log(err);
+        //     });
     };
 
     return (
