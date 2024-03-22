@@ -33,7 +33,7 @@ function Study() {
     ],
     curSort: "all",
     current_page: 1,
-    list_tatal: 50,
+    list_tatal: 250,
     // 状态
     curStatus: "",
     statusList: [
@@ -377,6 +377,7 @@ function Study() {
               dispatch({ current_page: page });
             },
             showSizeChanger: false,
+            total: list_tatal,
           }}
           rowClassName={(record, index) => {
             if (index % 2 === 1) {
