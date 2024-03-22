@@ -1,42 +1,101 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.router-memu {
+  height: 50px;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+  position: fixed;
+  top: 0;
+  background-color: #000;
+}
+.router-outlet {
+  min-height: calc(100vh - 50px);
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.router-outlet-footer {
+  display: flex;
+  background-color: #000;
+  color: #fff;
+  flex-wrap: wrap;
+  padding: 50px 50px;
+  justify-content: stretch;
+}
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-width: 200px;
+  max-width: 350px;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 2rem;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  .item-title {
+    font-weight: bold;
   }
-  to {
-    transform: rotate(360deg);
+  .footer-item-detail {
+    cursor: pointer;
   }
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  z-index: 999;
+  color: #fff;
+  animation: showMenu 0.5s linear;
+}
+.top-menu {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  position: relative;
+  justify-content: space-between;
+  padding: 0px 12px;
+}
+.left-top-menu {
+  display: flex;
+}
+.mobile-close-icon {
+  /* position: absolute; */
+  right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile-menu-btn {
+  padding: 1.25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.menu-list {
+  display: flex;
+  flex-direction: column;
+}
+@keyframes showMenu {
+  0% {
+    transform: translateY(-100%);
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  100% {
+    transform: translateY(0);
+  }
 }
