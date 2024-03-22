@@ -32,6 +32,8 @@ function Study() {
       { title: "难度", value: "difficulty" },
     ],
     curSort: "all",
+    current_page: 1,
+    list_tatal: 50,
     // 状态
     curStatus: "",
     statusList: [
@@ -107,6 +109,8 @@ function Study() {
     labelList,
     inputText,
     sortBy,
+    current_page,
+    list_tatal,
   } = state;
 
   const handleSortChange = (title, value) => {
@@ -134,8 +138,8 @@ function Study() {
   }, 500);
 
   useEffect(() => {
-    console.log("inputText", inputText);
-  }, [inputText]);
+    console.log("current_page", current_page);
+  }, [current_page]);
 
   const StatusIconMap = {
     unstarted: <CustomerServiceTwoTone />,
@@ -153,7 +157,7 @@ function Study() {
   const columns = [
     {
       title: "状态",
-      width: 50,
+      width: 60,
       dataIndex: "status",
       key: "status",
       render: (text) => <div>{StatusIconMap[text]}</div>,
@@ -369,6 +373,10 @@ function Study() {
           }}
           pagination={{
             defaultPageSize: 50,
+            onChange: (page, pageSize) => {
+              dispatch({ current_page: page });
+            },
+            showSizeChanger: false,
           }}
           rowClassName={(record, index) => {
             if (index % 2 === 1) {
