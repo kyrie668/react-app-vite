@@ -1,0 +1,116 @@
+.item-bank-container {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  .item-bank-right {
+    background-color: blanchedalmond;
+    height: 500px;
+    width: 270px;
+    margin-top: 40px;
+  }
+  .item-bank-left {
+    flex: 1;
+    width: 100%;
+    .ant-table-wrapper {
+      // max-height: 700px;
+      // overflow-y: auto;
+    }
+    .item-bank-title {
+      font-size: 20px;
+      margin: 0rem 0rem 1rem;
+    }
+    .recommend-container {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      .recommend-wrapper {
+        display: flex;
+        gap: 0.5rem;
+        overflow-x: auto;
+        .recommend-item {
+          border-radius: 10%;
+          background-color: blanchedalmond;
+          height: 135px;
+          width: 33%;
+          min-width: 200px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: red;
+        }
+      }
+    }
+    .item-bank-sort-list-container {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      .item-bank-sort-list {
+        display: flex;
+        gap: 0.5rem;
+        overflow-x: auto;
+        .sort-item {
+          border-radius: 20px;
+          padding: 5px 15px;
+          background-color: #ccc;
+          color: #000;
+          height: 40px;
+          flex-shrink: 0;
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+        }
+        .active {
+          background-color: #000;
+          color: #fff;
+        }
+      }
+    }
+    .item-bank-select-list-container {
+      width: 100%;
+      margin-bottom: 1.5rem;
+      .item-bank-select-list {
+        display: flex;
+        gap: 0.5rem;
+        overflow-x: auto;
+        &>div{
+          flex-shrink: 0;
+        }
+        &>span{
+          flex-shrink: 0;
+        }
+        .select-item {
+          border-radius: 20px;
+          padding: 5px 15px;
+          background-color: #ccc;
+          color: #000;
+          height: 40px;
+          flex-shrink: 0;
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+.gray-row {
+  background-color: #f5f5f5;
+}
+.sort-item-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  .sort-item-icon {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.easy-text {
+  color: rgb(0 175 155);
+}
+
+.medium-text {
+  color: rgb(255 184 0);
+}
+
+.hard-text {
+  color: rgb(255 45 85);
+}

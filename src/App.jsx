@@ -9,7 +9,7 @@ import { CloseOutlined, UnorderedListOutlined, SettingOutlined } from "@ant-desi
 
 const Logo = require("@/assets/icons/leetcode.svg");
 
-const AppContext = createContext();
+export  const AppContext = createContext();
 
 const RouterMenu = styled.div`
   display: flex;
@@ -165,27 +165,30 @@ function App() {
             {outlet}
           </div>
           <div className="router-outlet-footer" style={{ padding: isMobile ? "10px 10px" : "50px 50px" }}>
-            <div className="footer-item">
-              <div className="item-title">竞赛</div>
-              <div className="footer-item-detail">讨论社区</div>
-              <div className="footer-item-detail">讨论社区</div>
-              <div className="footer-item-detail">讨论社区</div>
-              <div className="footer-item-detail">讨论社区</div>
+            <div className="outlet-footer-site">
+              <div className="footer-item">
+                <div className="item-title">竞赛</div>
+                <div className="footer-item-detail">讨论社区</div>
+                <div className="footer-item-detail">讨论社区</div>
+                <div className="footer-item-detail">讨论社区</div>
+                <div className="footer-item-detail">讨论社区</div>
+              </div>
+              <div className="footer-item">
+                <div className="item-title">竞赛</div>
+                <div className="footer-item-detail">讨论社区</div>
+                <div className="footer-item-detail">讨论社区</div>
+                <div className="footer-item-detail">讨论社区</div>
+                <div className="footer-item-detail">讨论社区</div>
+              </div>
+              <div className="footer-item">
+                <div className="item-title">竞赛</div>
+                <div className="footer-item-detail">讨论社区</div>
+                <div className="footer-item-detail">讨论社区</div>
+                <div className="footer-item-detail">讨论社区</div>
+                <div className="footer-item-detail">讨论社区</div>
+              </div>
             </div>
-            <div className="footer-item">
-              <div className="item-title">竞赛</div>
-              <div className="footer-item-detail">讨论社区</div>
-              <div className="footer-item-detail">讨论社区</div>
-              <div className="footer-item-detail">讨论社区</div>
-              <div className="footer-item-detail">讨论社区</div>
-            </div>
-            <div className="footer-item">
-              <div className="item-title">竞赛</div>
-              <div className="footer-item-detail">讨论社区</div>
-              <div className="footer-item-detail">讨论社区</div>
-              <div className="footer-item-detail">讨论社区</div>
-              <div className="footer-item-detail">讨论社区</div>
-            </div>
+            <div className="outlet-footer-other">测试文字测试文字测试文字测试文字测试文字</div>
           </div>
         </div>
       </div>

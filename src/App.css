@@ -19,6 +19,7 @@
   position: fixed;
   top: 0;
   background-color: #000;
+  z-index: 50;
 }
 .router-outlet {
   min-height: calc(100vh - 50px);
@@ -28,13 +29,20 @@
   flex-direction: column;
   justify-content: space-between;
 }
-.router-outlet-footer {
+.outlet-footer-site {
   display: flex;
-  background-color: #000;
   color: #fff;
   flex-wrap: wrap;
-  padding: 50px 50px;
   justify-content: stretch;
+}
+.router-outlet-footer {
+  background-color: #000;
+  color: #fff;
+
+  padding: 50px 50px;
+}
+.outlet-footer-other {
+  margin-top: 2rem;
 }
 .footer-item {
   display: flex;
