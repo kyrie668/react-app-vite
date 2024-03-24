@@ -45,7 +45,9 @@
       .item-bank-sort-list {
         display: flex;
         gap: 0.5rem;
-        overflow-x: auto;
+        // overflow-x: auto;
+        flex-wrap: wrap;
+
         .sort-item {
           border-radius: 20px;
           padding: 5px 15px;
@@ -70,7 +72,8 @@
       .item-bank-select-list {
         display: flex;
         gap: 0.5rem;
-        overflow-x: auto;
+        // overflow-x: auto;
+        flex-wrap: wrap;
         &>div{
           flex-shrink: 0;
         }
