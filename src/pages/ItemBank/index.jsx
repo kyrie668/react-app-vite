@@ -282,6 +282,7 @@ function Study() {
       dataIndex: "passing_rate",
       key: "2",
       width: 100,
+      render: (text) => <div>{(text * 100).toFixed(2)}%</div>,
     },
     {
       title: (
