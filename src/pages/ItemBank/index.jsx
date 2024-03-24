@@ -440,7 +440,7 @@ function Study() {
           dataSource={dataSource}
           scroll={{
             x: 300,
-            y: 600,
+            // y: 600,
           }}
           // antd site header height
           sticky={{
