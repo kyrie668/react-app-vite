@@ -1,10 +1,10 @@
 import React from 'react'
 import './index.less'
 
-function Study() {
+function Discuss() {
   return (
-    <div>Study</div>
+    <div>Discuss</div>
   )
 }
 
-export default Study
+export default Discuss
