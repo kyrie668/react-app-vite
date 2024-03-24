@@ -59,7 +59,7 @@ axios.defaults.withCredentials = true;
 axios.defaults.headers.post["Content-Type"] = "application/x-www-form-urlencoded;charset=UTF-8";
 // 基础url
 // axios.defaults.baseURL = 后台接口地址;
-axios.defaults.baseURL = "/api";
+axios.defaults.baseURL = "api";
 
 /**
  * 封装get方法
@@ -69,7 +69,7 @@ export function get(url, params = {}) {
     axios
       .get(url, { params: params })
       .then((response) => {
-        console.log('response',response);
+        console.log("response", response);
         resolve(response.data);
       })
       .catch((err) => {
@@ -84,7 +84,11 @@ export function get(url, params = {}) {
 export function post(url, data = {}) {
   return new Promise((resolve, reject) => {
     axios
-      .post(url, data)
+      .post(url, data, {
+        headers: {
+          // "Content-Type": "application/json",
+        },
+      })
       .then((response) => {
         resolve(response.data);
       })
